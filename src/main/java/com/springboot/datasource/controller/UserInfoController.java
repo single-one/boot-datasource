@@ -19,7 +19,7 @@ public class UserInfoController {
         return ResultUtil.success(userList);
     }
 
-    @RequestMapping("/insert")
+    @RequestMapping("/insertTest")
     public Result<Object> insert() throws Exception {
         userInfoService.insert();
         return ResultUtil.success();
