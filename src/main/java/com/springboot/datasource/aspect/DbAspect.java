@@ -31,6 +31,7 @@ public class DbAspect implements Ordered {
             DbContextHolder.setDbType(DbContextHolder.DbType.MASTER);
             Object result = proceedingJoinPoint.proceed();
             return result;
+
         }finally {
             DbContextHolder.clearDbType();
             logger.info("restore database connection");
